@@ -21,12 +21,19 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "@/actions/*": ["./actions/*"],
+      "@/components/*": ["./components/*"],
+      "@/db/*": ["./db/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/types/*": ["./types/*"],
+      "@/utils/*": ["./utils/*"]
     },
     "target": "ES2017"
+
   },
   "include": [
     "next-env.d.ts",
