@@ -1,5 +1,6 @@
-import { useActionState } from "react";
 'use client'
+import { useActionState } from "react";
+
 
 import { Input, Button } from '@nextui-org/react'
 import { registerUser } from '@/actions/auth'
@@ -9,10 +10,7 @@ import Submit from './Submit'
 const initState = { message: null }
 
 const SignupForm = () => {
-  const [formState, action] = useActionState<{ message: string | null }>(
-    registerUser,
-    initState
-  )
+  const [formState, action] = useActionState<{ message: string | null }, FormData>(registerUser, initState)
 
   return (
     <form
